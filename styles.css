@@ -1,0 +1,548 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/Poppins-Regular.woff2') format('woff2'),
+        url('fonts/Poppins-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/Poppins-Medium.woff2') format('woff2'),
+        url('fonts/Poppins-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/Poppins-SemiBold.woff2') format('woff2'),
+        url('fonts/Poppins-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/Poppins-Bold.woff2') format('woff2'),
+        url('fonts/Poppins-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/Poppins-ExtraBold.woff2') format('woff2'),
+        url('fonts/Poppins-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+
+:root {
+    --text-light: #4b5563;
+    --extra-light: #f5f6f8;
+    --linear-gradient: linear-gradient(to right,
+    #c2b3ea,
+    #99b8f1,
+    #6abceb,
+    #41bed8,
+    #3abdbb,
+    #44c1ac,
+    #59c39a,
+    #72c486,
+    #83cd7f,
+    #96d676,
+    #acde6c,
+    #c5e562);
+    --max-width: 1200px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.section__container {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 5rem 1rem;
+}
+
+.section__subheader {
+    font-size: 1.2rem;
+    font-weight: 500;
+    background: var(--linear-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+.section__header {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: var(--linear-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+.btn {
+    padding: 0.625rem 1.5rem;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    color: var(--white);
+    background:var(--linear-gradient);
+    border-radius: 5rem;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: var(--text-dark);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn a {
+    text-decoration: none;
+    color: var(--extra-light)
+}
+
+img {
+    display: flex;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+ul {
+    list-style: none;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: black;
+}
+
+.navbar {
+    width: 100%;
+}
+
+
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 50px;
+}
+
+
+.nav-item a {
+    color: var(--extra-light)
+}
+
+
+
+.nav-item a:hover {
+    background: var(--linear-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+
+header {
+    background-color: black;
+}
+
+.header__container {
+    padding-block: 5rem 0;
+    display: grid;
+    gap: 2rem;
+    overflow: hidden;
+}
+
+.header__image img {
+    max-width: 350px;
+    margin-inline: auto;
+    margin-top: 2rem;
+}
+
+.header__content h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    background: var(--linear-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+.header__content h1 {
+    margin-bottom: 1rem;
+    font-size: 4rem;
+    font-weight: 800;
+    background: var(--linear-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 5rem;
+    text-align: center;
+}
+
+.header__content h3 {
+    margin-bottom: 1rem;
+    font-display: 1.25rem;
+    font-weight: 600;
+    background: var(--linear-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+.header__content p {
+    margin-bottom: 2rem;
+    color: var(--extra-light);
+    text-align: center;
+    line-height: 1.75rem;
+}
+
+.header__btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+
+
+.intro__container {
+    display: grid;
+    gap: 2rem;
+    overflow: hidden;
+}
+
+.skill__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.skill__grid img {
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.skill__grid:hover img:not(:hover) {
+    opacity: 0.3;
+}
+
+
+
+.intro__content :is(.section__subheader, .section__header) {
+    text-align: left;
+}
+
+.intro__description {
+    margin-block: 1rem 2rem;
+    color: var(--extra-light);
+    line-height: 1.75rem;
+}
+
+
+
+
+
+
+.journey__grid {
+    max-width: 900px;
+    margin-inline: auto;
+    margin-top: 4rem;
+    display: grid;
+    gap: 2rem;
+}
+
+.journey__grid>div {
+    display: grid;
+    gap: 1rem;
+}
+
+.journey__grid__header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--extra-light);
+}
+
+.journey__card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.journey__card>span {
+    position: relative;
+    isolation: isolate;
+    padding-inline: 2px;
+    height: 100%;
+    font-size: 1.2rem;
+    color: transparent;
+    /* Делаем цвет текста прозрачным */
+    background: linear-gradient(to right, #FF5F00, #FF9100, #FFCB00, #FFD700, #FF4500);
+    -webkit-background-clip: text;
+    /* Применяем градиент только к тексту в вебкит-браузерах */
+    background-clip: text;
+    /* Применяем градиент только к тексту в других браузерах */
+}
+
+
+.journey__card>span::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 2px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(to right, #FF5F00, #FF9100, #FFCB00, #FFD700, #FF4500);
+}
+
+.journey__card h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--extra-light);
+    ;
+}
+
+.journey__card h5 {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-light);
+}
+
+.journey__card p {
+    color: var(--text-light);
+}
+
+
+
+.footer__container {
+    text-align: center;
+}
+
+.footer__container h4 {
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    font-weight: 700;
+    background: var(--linear-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.footer__socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.footer__socials a {
+    font-size: 1.5rem;
+    color: var(--extra-light);
+}
+
+.footer__socials a:hover {
+    color: transparent;
+    /* Сначала делаем цвет текста прозрачным */
+    background:var(--linear-gradient);
+    -webkit-background-clip: text;
+    /* Применяем градиент только к тексту */
+    background-clip: text;
+    /* Применяем градиент только к тексту */
+}
+
+.footer__bar {
+    padding: 1rem;
+    font-size: 1rem;
+    color: var(--text-light);
+    text-align: center;
+}
+
+
+
+.hamburger {
+    cursor: pointer;
+    display: none;
+}
+
+.span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--extra-light);
+    margin: 5px auto;
+    transition: 0.3s ease-in-out;
+}
+
+
+
+@media (width > 540px) {
+    .choose__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .journey__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+}
+
+@media (width > 768px) {
+    nav {
+        position: static;
+        padding: 2rem 1rem;
+        max-width: var(--max-width);
+        margin-inline: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+
+
+    .nav__link a:hover {
+        color: transparent;
+        /* Сначала делаем цвет текста прозрачным */
+        background: var(--linear-gradient);
+        -webkit-background-clip: text;
+        /* Применяем градиент только к тексту */
+        background-clip: text;
+        /* Применяем градиент только к тексту */
+    }
+
+
+    .header__container {
+        padding-block: 0;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+
+    .header__content :is(h2, h1, h3, p) {
+        text-align: left;
+    }
+
+    .header__btns {
+        justify-content: flex-start;
+    }
+
+    .intro__container {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+
+    .intro__grid {
+        gap: 0.5rem 2rem;
+    }
+
+    .choose__grid {
+        gap: 1rem 4rem;
+    }
+
+    .journey__grid {
+        gap: 2rem 4rem;
+    }
+}
+
+.hamburger.active .span:nth-child(1) {
+    transform: rotate(45deg);
+    position: relative;
+    top: 8px;
+}
+
+.hamburger.active .span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .span:nth-child(3) {
+    transform: rotate(-45deg);
+    position: relative;
+    bottom: 8px;
+}
+
+
+/* Mobile view */
+@media (max-width: 800px) {
+
+    /* Use max-width instead of width < 800px */
+    .hamburger {
+        display: block;
+        position: fixed;
+    }
+
+    .hamburger.active .span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        right: -100%;
+        top: 80px;
+        flex-direction: column;
+        background-color: red;
+        width: 100%;
+        transition: 0.3s ease;
+        z-index: 10;       
+    }
+
+    .nav-item {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    /* Make sure the nav items text is visible */
+    .nav-link {
+        font-size: 18px;
+        color: white;
+        /* White text for visibility */
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+        color: #f0f0f0;
+        /* Slight color change on hover for contrast */
+    }
+
+    /* Show the nav menu when it's active */
+    .nav-menu.active {
+        right: 0;
+    }
+}
