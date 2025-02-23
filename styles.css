@@ -78,7 +78,6 @@
     font-size: 1.2rem;
     font-weight: 500;
     background: var(--linear-gradient);
-    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;
 }
@@ -87,7 +86,6 @@
     font-size: 2.5rem;
     font-weight: 700;
     background: var(--linear-gradient);
-    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;
 }
@@ -98,16 +96,25 @@
     border: none;
     font-size: 1rem;
     color: var(--white);
-    background:var(--linear-gradient);
     border-radius: 5rem;
     transition: 0.3s;
     cursor: pointer;
 }
 
-.btn:hover {
-    color: var(--text-dark);
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+.btn.primary {
+    background: white;
+    color: black;
 }
+
+.btn.secondary {
+    border: 2px solid rgba(255,255,255, 0.1);
+    background: none;
+}
+
+/* .btn:hover { */
+/*     color: var(--text-dark); */
+/*     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1); */
+/* } */
 
 .btn a {
     text-decoration: none;
@@ -176,6 +183,9 @@ header {
     display: grid;
     gap: 2rem;
     overflow: hidden;
+    color: white;
+
+    margin: 8rem auto;
 }
 
 .header__image img {
@@ -187,9 +197,6 @@ header {
 .header__content h2 {
     font-size: 1.5rem;
     font-weight: 500;
-    background: var(--linear-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     text-align: center;
 }
 
@@ -197,9 +204,6 @@ header {
     margin-bottom: 1rem;
     font-size: 4rem;
     font-weight: 800;
-    background: var(--linear-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     line-height: 5rem;
     text-align: center;
 }
@@ -208,9 +212,6 @@ header {
     margin-bottom: 1rem;
     font-display: 1.25rem;
     font-weight: 600;
-    background: var(--linear-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     text-align: center;
 }
 
@@ -396,6 +397,7 @@ header {
 .span {
     display: block;
     width: 25px;
+    position: relative;
     height: 3px;
     background-color: var(--extra-light);
     margin: 5px auto;
@@ -473,22 +475,6 @@ header {
     }
 }
 
-.hamburger.active .span:nth-child(1) {
-    transform: rotate(45deg);
-    position: relative;
-    top: 8px;
-}
-
-.hamburger.active .span:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger.active .span:nth-child(3) {
-    transform: rotate(-45deg);
-    position: relative;
-    bottom: 8px;
-}
-
 
 /* Mobile view */
 @media (max-width: 800px) {
@@ -497,6 +483,9 @@ header {
     .hamburger {
         display: block;
         position: fixed;
+        left: 50%;
+        top: 1rem;
+        transform: translateX(-50%);
     }
 
     .hamburger.active .span:nth-child(2) {
